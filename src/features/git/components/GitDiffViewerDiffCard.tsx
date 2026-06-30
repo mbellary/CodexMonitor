@@ -144,8 +144,8 @@ export const DiffCard = memo(function DiffCard({
       ...parsed,
       name: normalizedName,
       prevName: normalizedPrevName,
-      oldLines: entry.oldLines,
-      newLines: entry.newLines,
+      deletionLines: entry.oldLines ?? parsed.deletionLines,
+      additionLines: entry.newLines ?? parsed.additionLines,
     } satisfies FileDiffMetadata;
   }, [displayPath, entry.diff, entry.newLines, entry.oldLines]);
 
@@ -184,7 +184,7 @@ export const DiffCard = memo(function DiffCard({
       disableFileHeader: true,
       enableLineSelection: useInteractiveDiff,
       onLineSelected: useInteractiveDiff ? onSelectedLinesChange : undefined,
-      enableHoverUtility: lineActionEnabled,
+      enableGutterUtility: lineActionEnabled,
     }),
     [
       diffStyle,
@@ -261,7 +261,7 @@ export const DiffCard = memo(function DiffCard({
             fileDiff={fileDiff}
             options={diffOptions}
             selectedLines={useInteractiveDiff ? selectedLines : null}
-            renderHoverUtility={
+            renderGutterUtility={
               lineActionEnabled
                 ? (getHoveredLine) => (
                     <button
