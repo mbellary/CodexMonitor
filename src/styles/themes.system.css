@@ -1,6 +1,7 @@
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
     color-scheme: light;
+    --app-background: #eef1f6;
     --text-primary: #1a1d24;
     --text-strong: #0e1118;
     --text-emphasis: rgba(17, 20, 28, 0.9);
