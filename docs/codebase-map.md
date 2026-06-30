@@ -5,6 +5,7 @@ Canonical navigation guide for CodexMonitor. Use this as: "if you need X, edit Y
 Related docs:
 
 - Setup/build/release: `README.md`
+- Product architecture vision: `docs/orchestrated-agent-workflow-vision.md`
 - iOS remote over Tailscale (TCP): `docs/mobile-ios-tailscale-blueprint.md`
 
 ## Start Here: How Changes Flow
