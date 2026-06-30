@@ -84,6 +84,10 @@ body {
   font-family: var(--ui-font-family);
 }
 
+.app.is-windows {
+  background: var(--app-background);
+}
+
 .app.is-resizing,
 .app.is-resizing .main {
   transition: none;
